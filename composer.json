@@ -1,5 +1,5 @@
 {
-    "name": "etiennetlm/craft-readfile-filter",
+    "name": "tlm/craft-readfile-filter",
     "description": "Exposes readfile() to twig template filter.",
     "type": "craft-plugin",
     "version": "1.0.0",
