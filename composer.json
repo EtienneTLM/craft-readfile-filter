@@ -11,8 +11,8 @@
         "readfile"
     ],
     "support": {
-        "docs": "https://github.com/EtienneTLM/readfile/blob/master/README.md",
-        "issues": "https://github.com/EtienneTLM/readfile/issues"
+        "docs": "https://github.com/EtienneTLM/craft-readfile-filter/blob/master/README.md",
+        "issues": "https://github.com/EtienneTLM/craft-readfile-filter/issues"
     },
     "license": "MIT",
     "authors": [
@@ -34,8 +34,8 @@
         "handle": "readfile",
         "developer": "Etienne Bouchard",
         "developerUrl": "https://github.com/EtienneTLM",
-        "documentationUrl": "https://github.com/EtienneTLM/readfile/blob/master/README.md",
-        "changelogUrl": "https://raw.githubusercontent.com/EtienneTLM/readfile/master/CHANGELOG.md",
+        "documentationUrl": "https://github.com/EtienneTLM/craft-readfile-filter/blob/master/README.md",
+        "changelogUrl": "https://raw.githubusercontent.com/EtienneTLM/craft-readfile-filter/master/CHANGELOG.md",
         "class": "tlm\\readfile\\Readfile"
     }
 }
