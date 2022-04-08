@@ -1,5 +1,5 @@
 {
-    "name": "tlm/readfile",
+    "name": "etiennetlm/craft-readfile-filter",
     "description": "Exposes readfile() to twig template filter.",
     "type": "craft-plugin",
     "version": "1.0.0",
@@ -26,16 +26,16 @@
     },
     "autoload": {
         "psr-4": {
-          "tlm\\readfile\\": "src/"
+          "etiennetlm\\craft-readfile-filter\\": "src/"
         }
     },
     "extra": {
-        "name": "Readfile",
-        "handle": "readfile",
+        "name": "Craft-Readfile-Filter",
+        "handle": "craft-readfile-filter",
         "developer": "Etienne Bouchard",
         "developerUrl": "https://github.com/EtienneTLM",
         "documentationUrl": "https://github.com/EtienneTLM/craft-readfile-filter/blob/master/README.md",
         "changelogUrl": "https://raw.githubusercontent.com/EtienneTLM/craft-readfile-filter/master/CHANGELOG.md",
-        "class": "tlm\\readfile\\Readfile"
+        "class": "etiennetlm\\craft-readfile-filter\\Readfile"
     }
 }
