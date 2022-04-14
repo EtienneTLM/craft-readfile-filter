@@ -1,4 +1,4 @@
-# Readfile plugin for Craft CMS 3.x
+# Readfile Filter plugin for Craft CMS 3.x
 
 Exposes readfile() to twig template filter. Allows to display PDF files directly in the browser, obfuscating the real file path. Files of other types than PDF will download automatically.
 
@@ -16,7 +16,7 @@ To install the plugin, follow these instructions.
 
 2. Then tell Composer to load the plugin:
 
-        composer require tlm/craft-readfile-filter
+        composer require tlm/readfile-filter
 
 3. In the Control Panel, go to Settings → Plugins and click the “Install” button for Readfile.
 

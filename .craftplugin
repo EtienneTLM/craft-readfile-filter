@@ -1,5 +1,5 @@
 {
-    "pluginName": "Craft-Readfile-Filter",
+    "pluginName": "Readfile-Filter",
     "pluginDescription": "Exposes readfile() to twig template filter.",
     "pluginVersion": "1.0.0",
     "pluginAuthorName": "TLM",

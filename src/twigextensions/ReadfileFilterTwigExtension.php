@@ -1,6 +1,6 @@
 <?php
 /**
- * Readfile plugin for Craft CMS 3.x
+ * Readfile Filter plugin for Craft CMS 3.x
  *
  * Exposes readfile() to twig template filter.
  *
@@ -8,9 +8,9 @@
  * @copyright Copyright (c) 2022 Etienne Bouchard
  */
 
-namespace tlm\readfile\twigextensions;
+namespace tlm\readfilefilter\twigextensions;
 
-use tlm\readfile\Readfile;
+use tlm\readfilefilter\ReadfileFilter;
 
 use Craft;
 use craft\helpers\FileHelper;
@@ -18,10 +18,10 @@ use Twig\TwigFilter;
 
 /**
  * @author    Etienne Bouchard
- * @package   Readfile
+ * @package   ReadfileFilter
  * @since     1.0.0
  */
-class ReadfileTwigExtension extends \Twig_Extension
+class ReadfileFilterTwigExtension extends \Twig_Extension
 {
     // Protected Properties
     // =========================================================================
@@ -41,7 +41,7 @@ class ReadfileTwigExtension extends \Twig_Extension
      */
     public function getName()
     {
-        return 'Readfile';
+        return 'ReadfileFilter';
     }
 
     /**

@@ -1,6 +1,6 @@
 <?php
 /**
- * Readfile plugin for Craft CMS 3.x
+ * Readfile Filter plugin for Craft CMS 3.x
  *
  * Exposes readfile() to twig template filter.
  *
@@ -10,9 +10,9 @@
 
 /**
  * @author    Etienne Bouchard
- * @package   Readfile
+ * @package   ReadfileFilter
  * @since     1.0.0
  */
 return [
-    'Readfile plugin loaded' => 'Readfile plugin loaded',
+    'Readfile Filter plugin loaded' => 'Readfile Filter plugin loaded',
 ];

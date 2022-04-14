@@ -1,6 +1,6 @@
 <?php
 /**
- * Readfile plugin for Craft CMS 3.x
+ * Readfile Filter plugin for Craft CMS 3.x
  *
  * Exposes readfile() to twig template filter.
  *
@@ -8,9 +8,9 @@
  * @copyright Copyright (c) 2022 Etienne Bouchard
  */
 
-namespace tlm\readfile;
+namespace tlm\readfilefilter;
 
-use tlm\readfile\twigextensions\ReadfileTwigExtension;
+use tlm\readfilefilter\twigextensions\ReadfileFilterTwigExtension;
 
 use Craft;
 use craft\base\Plugin;
@@ -22,20 +22,20 @@ use craft\events\RegisterUrlRulesEvent;
 use yii\base\Event;
 
 /**
- * Class Readfile
+ * Class ReadfileFilter
  *
  * @author    Etienne Bouchard
- * @package   Readfile
+ * @package   ReadfileFilter
  * @since     1.0.0
  *
  */
-class Readfile extends Plugin
+class ReadfileFilter extends Plugin
 {
     // Static Properties
     // =========================================================================
 
     /**
-     * @var Readfile
+     * @var ReadfileFilter
      */
     public static $plugin;
 
@@ -68,7 +68,7 @@ class Readfile extends Plugin
         parent::init();
         self::$plugin = $this;
 
-        Craft::$app->view->registerTwigExtension(new ReadfileTwigExtension());
+        Craft::$app->view->registerTwigExtension(new ReadfileFilterTwigExtension());
 
         Event::on(
             Plugins::class,
@@ -81,7 +81,7 @@ class Readfile extends Plugin
 
         Craft::info(
             Craft::t(
-                'readfile',
+                'readfile-filter',
                 '{name} plugin loaded',
                 ['name' => $this->name]
             ),
