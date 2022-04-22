@@ -74,22 +74,34 @@ class ReadfileFilterTwigExtension extends \Twig_Extension
         // get the files mime type
         $mimeType = FileHelper::getMimeTypeByExtension($filename);
 
-        // use an optimized header for pdfs
-        if ($mimeType == "application/pdf") {
-            
-            Craft::$app->response->headers
-                ->set('Content-Type', 'application/pdf; charset=UTF-8')
+        // set http headers
+        Craft::$app->response->headers
+                ->set('Content-Type', $mimeType . '; charset=UTF-8')
                 ->set('Content-Disposition', 'inline; filename="' . $filename . '"')
                 ->set('Content-Transfer-Encoding', 'binary')
                 ->set('Accept-Ranges', 'bytes');
+        
+        if ($mimeType == "application/pdf") {
+            // render the file content directly to the output
+            readfile($filepath);
         }
         else {
-            
-            Craft::$app->response->headers
-                ->set('Content-Type', $mimeType . '; charset=UTF-8');
-        }
+            // force the download of the file
+            /*
+            Craft::$app->getResponse()->sendContentAsFile($filepath, null, [
+                'mimeType' => $mimeType,
+                'inline' => false
+            ]);
+            */
 
-        // render the file content directly to the output
-        readfile($filepath);
+            
+            Craft::$app->response->sendFile($filepath, null, [
+                'mimeType' => $mimeType,
+                'inline' => false
+            ]);
+            
+
+            //readfile($filepath);
+        }
     }
 }
